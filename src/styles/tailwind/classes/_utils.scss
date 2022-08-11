@@ -1,0 +1,10 @@
+/*
+ * clearfix
+**/
+@include tw-mixins(clearfix) {
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+}

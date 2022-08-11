@@ -1,0 +1,88 @@
+/*
+ * Margin
+**/
+@each $name, $value in map.get($spacing, "margin") {
+	@include tw-mixins($selector: ml-#{$name}) {
+		margin-left: $value;
+	}
+	@include tw-mixins($selector: mr-#{$name}) {
+		margin-right: $value;
+	}
+	@include tw-mixins($selector: mt-#{$name}) {
+		margin-top: $value;
+	}
+	@include tw-mixins($selector: mb-#{$name}) {
+		margin-bottom: $value;
+	}
+	@include tw-mixins($selector: mx-#{$name}) {
+		margin-left: $value;
+		margin-right: $value;
+	}
+	@include tw-mixins($selector: my-#{$name}) {
+		margin-top: $value;
+		margin-bottom: $value;
+	}
+	@include tw-mixins($selector: m-#{$name}) {
+		margin: $value;
+	}
+
+	@if $name != "auto" {
+		@include tw-mixins($selector: -ml-#{$name}) {
+			margin-left: -$value;
+		}
+		@include tw-mixins($selector: -mr-#{$name}) {
+			margin-right: -$value;
+		}
+		@include tw-mixins($selector: -mt-#{$name}) {
+			margin-top: -$value;
+		}
+		@include tw-mixins($selector: -mb-#{$name}) {
+			margin-bottom: -$value;
+		}
+		@include tw-mixins($selector: -mx-#{$name}) {
+			margin-left: -$value;
+			margin-right: -$value;
+		}
+		@include tw-mixins($selector: -my-#{$name}) {
+			margin-top: -$value;
+			margin-bottom: -$value;
+		}
+		@include tw-mixins($selector: -m-#{$name}) {
+			margin: -$value;
+		}
+	}
+}
+
+/*
+ * Padding
+**/
+@each $name, $value in map.get($spacing, "ratio") {
+	@include tw-mixins($selector: ratio-#{$name}) {
+		padding-top: $value;
+	}
+}
+@each $name, $value in map.get($spacing, "padding") {
+	@include tw-mixins($selector: pl-#{$name}) {
+		padding-left: $value;
+	}
+	@include tw-mixins($selector: pr-#{$name}) {
+		padding-right: $value;
+	}
+	@include tw-mixins($selector: pt-#{$name}) {
+		padding-top: $value;
+	}
+	@include tw-mixins($selector: pb-#{$name}) {
+		padding-bottom: $value;
+	}
+	@include tw-mixins($selector: px-#{$name}) {
+		padding-left: $value;
+		padding-right: $value;
+	}
+	@include tw-mixins($selector: py-#{$name}) {
+		padding-top: $value;
+		padding-bottom: $value;
+	}
+	@include tw-mixins($selector: p-#{$name}) {
+		padding: $value;
+	}
+}

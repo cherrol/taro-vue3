@@ -1,0 +1,46 @@
+/*
+ * Animation
+**/
+@each $name, $value in map.get($animate, "animation") {
+	@include tw-mixins($selector: animate-#{$name}) {
+		animation: $value;
+	}
+}
+
+/*
+ * Transitions
+**/
+@each $name, $value in map.get($animate, "transition") {
+	@include tw-mixins($selector: transition-#{$name}) {
+		transition-property: $value;
+		transition-timing-function: $transition-timing-function-default;
+		transition-duration: $transition-duration-default;
+	}
+}
+
+/*
+ * Transition duration
+**/
+@each $name, $value in map.get($animate, "transition-duration") {
+	@include tw-mixins($selector: duration-#{$name}) {
+		transition-duration: $value;
+	}
+}
+
+/*
+ * Transition timing function
+**/
+@each $name, $value in map.get($animate, "transition-timing-function") {
+	@include tw-mixins($selector: #{$name}) {
+		transition-timing-function: $value;
+	}
+}
+
+/*
+ * Transition delay
+**/
+@each $name, $value in map.get($animate, "transition-delay") {
+	@include tw-mixins($selector: delay-#{$name}) {
+		transition-delay: $value;
+	}
+}

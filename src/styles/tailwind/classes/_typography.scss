@@ -1,0 +1,159 @@
+/*
+ * Font size
+**/
+@each $name, $value in map.get($font, "size") {
+	@include tw-mixins($selector: text-#{$name}) {
+		font-size: $value;
+	}
+}
+
+/*
+ * Font family
+**/
+@each $name, $value in map.get($font, "family") {
+	@include tw-mixins($selector: text-#{$name}) {
+		font-family: $value;
+	}
+}
+
+/*
+ * Font weight
+**/
+@each $name, $value in map.get($font, "weight") {
+	@include tw-mixins($selector: font-#{$name}) {
+		font-weight: $value;
+	}
+}
+
+/*
+ * Font style
+**/
+@each $name, $value in map.get($font, "style") {
+	@include tw-mixins($selector: #{$name}) {
+		font-style: $value;
+	}
+}
+
+/*
+ * Text color
+**/
+@each $name, $value in map.get($text, "color") {
+	@include tw-mixins($selector: text-#{$name}, $hover: true) {
+		color: $value;
+	}
+}
+
+/*
+ * Text align
+**/
+@each $name, $value in map.get($text, "align") {
+	@include tw-mixins($selector: text-#{$name}) {
+		text-align: $value;
+	}
+}
+
+/*
+ * Letter spaceing
+**/
+@each $name, $value in map.get($text, "letter-spaceing") {
+	@include tw-mixins($selector: tracking-#{$name}) {
+		letter-spacing: $value;
+	}
+}
+
+/*
+ * Line-height
+**/
+@each $name, $value in map.get($text, "line-height") {
+	@include tw-mixins($selector: leading-#{$name}) {
+		line-height: $value;
+	}
+}
+
+/*
+ * Text decoration
+**/
+@each $name, $value in map.get($text, "decoration") {
+	@include tw-mixins($selector: #{$name}, $hover: $name == "underline") {
+		text-decoration: $value;
+	}
+}
+
+/*
+ * Text transform
+**/
+@each $name, $value in map.get($text, "transform") {
+	@include tw-mixins($selector: #{$name}) {
+		text-transform: $value;
+	}
+}
+
+/*
+ * Vertical align
+**/
+@each $name, $value in map.get($text, "vertical-align") {
+	@include tw-mixins($selector: align-#{$name}) {
+		vertical-align: $value;
+	}
+}
+
+/*
+ * White space
+**/
+@each $name, $value in map.get($text, "white-space") {
+	@include tw-mixins($selector: whitespace-#{$name}) {
+		white-space: $value;
+	}
+}
+
+/*
+ * Word break
+**/
+@each $name, $value in map.get($text, "word-break") {
+	@include tw-mixins($selector: break-#{$name}) {
+		@if $name == "words" {
+			overflow-wrap: break-word;
+		}
+
+		@if $name == "all" {
+			word-break: break-all;
+		}
+
+		@if $name == "normal" {
+			overflow-wrap: normal;
+			word-break: normal;
+		}
+	}
+}
+
+/*
+ * Text overflow
+**/
+@each $name, $value in map.get($text, "overflow") {
+	@include tw-mixins($selector: truncate-#{$name}, $hover: true) {
+		overflow: hidden;
+
+		@if $value == 1 {
+			text-overflow: ellipsis;
+			white-space: nowrap;
+		}
+
+		@if $value > 1 {
+			/* stylelint-disable-next-line value-no-vendor-prefix */
+			display: -webkit-box;
+			white-space: normal;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: $value;
+			height: 1em * $line-height-base * $value;
+		}
+	}
+}
+
+/*
+ * List style
+**/
+@each $name, $value in map.get($list, "style") {
+	@include tw-mixins($selector: list-#{$name}) {
+		list-style: $value;
+	}
+}

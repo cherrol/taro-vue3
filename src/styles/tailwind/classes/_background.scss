@@ -1,0 +1,53 @@
+/*
+ * background color
+**/
+@each $name, $value in map.get($background, "color") {
+	@include tw-mixins($selector: bg-#{$name}, $hover: true) {
+		background-color: $value;
+	}
+}
+
+/*
+ * background attachment
+**/
+@each $name, $value in map.get($background, "attachment") {
+	@include tw-mixins($selector: bg-#{$name}) {
+		background-attachment: $value;
+	}
+}
+
+/*
+ * background clip
+**/
+@each $name, $value in map.get($background, "clip") {
+	@include tw-mixins($selector: bg-clip-#{$name}) {
+		background-clip: $value;
+	}
+}
+
+/*
+ * background position
+**/
+@each $name, $value in map.get($background, "position") {
+	@include tw-mixins($selector: bg-#{$name}) {
+		background-position: $value;
+	}
+}
+
+/*
+ * background repeat
+**/
+@each $name, $value in map.get($background, "repeat") {
+	@include tw-mixins($selector: bg-#{$name}) {
+		background-repeat: $value;
+	}
+}
+
+/*
+ * background size
+**/
+@each $name, $value in map.get($background, "size") {
+	@include tw-mixins($selector: bg-#{$name}) {
+		background-size: $value;
+	}
+}

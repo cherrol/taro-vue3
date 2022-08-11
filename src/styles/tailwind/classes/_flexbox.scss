@@ -1,0 +1,134 @@
+/*
+ * Flex direction
+**/
+@each $name, $value in map.get($flexbox, "flex-direction") {
+	@include tw-mixins($selector: flex-#{$name}) {
+		flex-direction: $value;
+	}
+}
+
+/*
+ * Flex wrap
+**/
+@each $name, $value in map.get($flexbox, "flex-wrap") {
+	@include tw-mixins($selector: flex-#{$name}) {
+		flex-wrap: $value;
+	}
+}
+
+/*
+ * Flex grow
+**/
+@each $name, $value in map.get($flexbox, "flex-grow") {
+	@include tw-mixins($selector: flex-#{$name}) {
+		flex-grow: $value;
+	}
+}
+
+/*
+ * Flex shrink
+**/
+@each $name, $value in map.get($flexbox, "flex-shrink") {
+	@include tw-mixins($selector: flex-#{$name}) {
+		flex-shrink: $value;
+	}
+}
+
+/*
+ * Flex
+**/
+@each $name, $value in map.get($flexbox, "flex") {
+	@include tw-mixins($selector: flex-#{$name}) {
+		flex: $value;
+	}
+}
+
+/*
+ * Justify content
+**/
+@each $name, $value in map.get($flexbox, "justify-content") {
+	@include tw-mixins($selector: justify-#{$name}) {
+		justify-content: $value;
+	}
+}
+
+/*
+ * Align content
+**/
+@each $name, $value in map.get($flexbox, "align-content") {
+	@include tw-mixins($selector: content-#{$name}) {
+		align-content: $value;
+	}
+}
+
+/*
+ * Place content
+**/
+@each $name, $value in map.get($flexbox, "place-content") {
+	@include tw-mixins($selector: place-content-#{$name}) {
+		place-content: $value;
+	}
+}
+
+/*
+ * Align items
+**/
+@each $name, $value in map.get($flexbox, "align-items") {
+	@include tw-mixins($selector: items-#{$name}) {
+		align-items: $value;
+	}
+}
+
+/*
+ * Align self
+**/
+@each $name, $value in map.get($flexbox, "align-self") {
+	@include tw-mixins($selector: self-#{$name}) {
+		align-self: $value;
+	}
+}
+
+/*
+ * Justify items
+**/
+@each $name, $value in map.get($flexbox, "justify-items") {
+	@include tw-mixins($selector: justify-items-#{$name}) {
+		justify-items: $value;
+	}
+}
+
+/*
+ * Justify self
+**/
+@each $name, $value in map.get($flexbox, "justify-self") {
+	@include tw-mixins($selector: justify-self-#{$name}) {
+		justify-self: $value;
+	}
+}
+
+/*
+ * Place items
+**/
+@each $name, $value in map.get($flexbox, "place-items") {
+	@include tw-mixins($selector: place-items-#{$name}) {
+		place-items: $value;
+	}
+}
+
+/*
+ * Place self
+**/
+@each $name, $value in map.get($flexbox, "place-self") {
+	@include tw-mixins($selector: place-self-#{$name}) {
+		place-self: $value;
+	}
+}
+
+/*
+ * Order
+**/
+@each $name, $value in map.get($flexbox, "order") {
+	@include tw-mixins($selector: order-#{$name}) {
+		order: $value;
+	}
+}

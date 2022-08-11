@@ -1,0 +1,17 @@
+/*
+ * Box shadow
+**/
+@each $name, $value in map.get($effects, "box-shadow") {
+	@include tw-mixins($selector: #{$name}) {
+		box-shadow: #{$value};
+	}
+}
+
+/*
+ * Opacity
+**/
+@each $name, $value in map.get($effects, "opacity") {
+	@include tw-mixins($selector: opacity-#{$name}, $hover: true) {
+		opacity: $value;
+	}
+}

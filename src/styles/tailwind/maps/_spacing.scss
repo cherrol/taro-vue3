@@ -1,0 +1,19 @@
+$spacing: (
+	"margin": (
+		"auto": auto,
+		"full": 100%,
+		"xs": $space * 0.5,
+		"sm": $space,
+		"md": $space * 2,
+		"lg": $space * 3,
+		"xl": $space * 4
+	),
+	"padding": (
+		"full": 100%,
+		"xs": $space * 0.5,
+		"sm": $space,
+		"md": $space * 2,
+		"lg": $space * 3,
+		"xl": $space * 4
+	)
+);
